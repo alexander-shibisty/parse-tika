@@ -134,7 +134,6 @@ public class TikaParser implements org.apache.nutch.parse.Parser {
     }
 
     // check meta directives
-    //if (!metaTags.getNoIndex()) { // okay to index
       StringBuffer sb = new StringBuffer();
       if (LOG.isTraceEnabled()) {
         LOG.trace("Getting text...");
@@ -147,9 +146,7 @@ public class TikaParser implements org.apache.nutch.parse.Parser {
       }
       utils.getTitle(sb, root); // extract title
       title = sb.toString().trim();
-    //}
 
-    //if (!metaTags.getNoFollow()) { // okay to follow links
       ArrayList<Outlink> l = new ArrayList<Outlink>(); // extract outlinks
       URL baseTag = utils.getBase(root);
       if (LOG.isTraceEnabled()) {
@@ -160,7 +157,6 @@ public class TikaParser implements org.apache.nutch.parse.Parser {
       if (LOG.isTraceEnabled()) {
         LOG.trace("found " + outlinks.length + " outlinks in " + base);
       }
-    //}
 
     // populate Nutch metadata with Tika metadata
     String[] TikaMDNames = tikamd.names();
