@@ -1,6 +1,6 @@
 ####parse-tika plugin for Nutch 2.3
 
-It is native parse-tika plugin from Nutch 2.3, i just remove little code for noindex/nofollow ignore.
+It is native parse-tika plugin from Nutch 2.3, I removed a little code for ignore noindex/nofollow.
 
 Install:
 1. Go to NUTCH_HOME/src/plugin/
